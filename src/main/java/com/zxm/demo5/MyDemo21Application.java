@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EntityScan(basePackages={"com.zxm.domain"})
 @EnableJpaRepositories(basePackages= {"com.zxm.rep"})
 @SpringBootApplication(scanBasePackages={"com.zxm.demo5","com.zxm.ctrl"})
-public class MyDemo21Application /*extends WebMvcConfigurerAdapter*/{
+public class MyDemo21Application extends WebMvcConfigurerAdapter{
 
 	public static void main(String[] args) {
 		
@@ -24,4 +24,9 @@ public class MyDemo21Application /*extends WebMvcConfigurerAdapter*/{
 		registry.addRedirectViewController("/", "/readingList");
 	
 	}*/
+	
+	@Override
+	public void addViewControllers(ViewControllerRegistry registry) {
+		registry.addViewController("/login").setViewName("login");
+	}
 }

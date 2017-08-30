@@ -12,6 +12,10 @@ body{
 	font-size: 10pt;
 }
 
+.error{
+	background: red;
+}
+
 label {
 	font-weight: bold;
 		background: gray;
