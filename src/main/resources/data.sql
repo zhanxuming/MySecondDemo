@@ -1,0 +1,1 @@
+insert into Reader values ('zxm','zhan xuming','123456')
